@@ -1,0 +1,273 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and main container */
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  height: 100vh;
+
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 50px;
+  background-color: #0000005b;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo{
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration:none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #f9f9ffa7;
+  border-radius: 100px;
+}
+
+
+/* Sections */
+.left, .right {
+  flex: 1;
+  height: 100%;
+}
+
+.left {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right {
+  background-image: url(https://images.pexels.com/photos/3810565/pexels-photo-3810565.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+/* Text selection styling */
+::selection {
+  color: #fff;
+  background: #675AFE;
+}
+
+/* Wrapper for the form */
+.wrapper {
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.71);
+}
+
+.wrapper header {
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.wrapper form {
+  margin: 40px 0 20px;
+}
+.arrow-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #00b4db;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.arrow-btn:hover {
+  background-color: #049bce;
+}
+
+.arrow-btn i {
+  pointer-events: none;
+}
+
+
+form :where(input, select, button) {
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+}
+
+/* Form elements */
+form p {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+form input {
+  height: 50px;
+  font-size: 17px;
+  padding: 0 15px;
+  border: 1px solid #999;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus {
+  padding: 0 14px;
+  border: 2px solid #0083b0;
+}
+
+/* Dropdown section */
+form .drop-list {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.drop-list .select-box {
+  display: flex;
+  width: 175px;
+  height: 45px;
+  align-items: center;
+  border-radius: 5px;
+  justify-content: center;
+  border: 1px solid #999;
+}
+
+.select-box img {
+  max-width: 21px;
+}
+
+.select-box select {
+  width: auto;
+  font-size: 20px;
+  background: none;
+  margin-left: 5px;
+  border: none;
+  padding: 0;
+}
+
+/* Scrollbar customization for select box */
+.select-box select::-webkit-scrollbar {
+  width: 8px;
+}
+
+.select-box select::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.select-box select::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 8px;
+  border-right: 2px solid #fff;
+}
+
+/* Exchange icon between From and To dropdowns */
+.drop-list .icon {
+  cursor: pointer;
+  margin-top: 30px;
+  font-size: 22px;
+}
+
+/* Exchange rate section */
+form .exchange-rate {
+  border: 1px dotted gray;
+  border-radius: 5px;
+  padding: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 19px;
+  margin: 20px 0 30px;
+}
+
+/* Button styling */
+form button {
+  height: 52px;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+  background: #00b4db;
+  transition: background-color 0.5s;
+}
+
+form button:hover {
+  background: #049bce;
+}
+
+/* Footer text styling */
+.footer .footer-text {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #024359;
+  transition: color 0.5s;
+}
+
+.footer .footer-text:hover {
+  color: #035c7a;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+  .wrapper {
+    width: 370px;
+  }
+
+  .drop-list .select-box {
+    width: 115px;
+    height: 45px;
+  }
+}
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .wrapper {
+    width: 370px;
+  }
+
+  .drop-list .select-box {
+    width: 115px;
+    height: 45px;
+  }
+}

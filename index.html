@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Currency Exchange App in JavaScript</title>
+    <link rel="stylesheet" href="style1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">FX & Crypto Converter</div>
+        <ul>
+            <li><a href="https://riyad-x.github.io/Home-page-Fx/#">Home</a></li>
+            <li><a href="#converter">Converter</a></li>
+            <li><a href="#crypto">Crypto</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="left">
+        <div class="wrapper">
+            <header>Currency Exchange</header>
+            <form action="#">
+                <div class="amount">
+                    <p>Enter Amount</p>
+                    <input type="text" value="1">
+                </div>
+                <div class="drop-list">
+                    <div class="from">
+                        <p>From</p>
+                        <div class="select-box">
+                            <img src="https://flagcdn.com/48x36/us.png" alt="flag">
+                            <select></select>
+                        </div>
+                    </div>
+                    <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+                    <div class="to">
+                        <p>To</p>
+                        <div class="select-box">
+                            <img src="https://flagcdn.com/48x36/af.png" alt="flag">
+                            <select></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="exchange-rate">Getting exchange rate...</div>
+                <button>Get Exchange Rate</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="right"></div>
+    <a href="https://riyad-x.github.io/live-tracker/" class="arrow-btn">
+        <i class="fas fa-arrow-right"></i>
+    </a>
+
+    <script src="js/country-list.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
